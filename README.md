@@ -1,8 +1,8 @@
 **This is the template README. Please update this with project specific content.**
 
-# members-protections-enhancements-ui-tests
+# mpe-ui-journey-tests
 
-<SERVICE_NAME> UI journey tests.
+MPE UI journey tests.
 
 ## Pre-requisites
 
@@ -11,13 +11,13 @@
 Start Mongo Docker container as follows:
 
 ```bash
-docker run --rm -d -p 27017:27017 --name mongo percona/percona-server-mongodb:6.0
+docker run --rm -d -p 27017:27017 --name mongo percona/percona-server-mongodb:5.0
 ```
 
 Start `<SERVICE_MANAGER_PROFILE>` services as follows:
 
 ```bash
-sm2 --start <SERVICE_MANAGER_PROFILE>
+sm2 --start MPE_ALL
 ```
 
 ## Tests
@@ -54,3 +54,4 @@ sbt scalafmtAll
 ## License
 
 This code is open source software licensed under the [Apache 2.0 License]("http://www.apache.org/licenses/LICENSE-2.0.html").
+
