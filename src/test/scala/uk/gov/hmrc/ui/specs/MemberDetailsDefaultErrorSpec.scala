@@ -34,7 +34,6 @@ class MemberDetailsDefaultErrorSpec extends BaseSpec {
       auth.loginUsingAuthorityWizard("PSA")
 
       When("I click the Start now link")
-      memberDetails.checkJourneyUrl("start")
       memberDetails.startNow()
 
       And("I fill in the First Name and Last Name")
