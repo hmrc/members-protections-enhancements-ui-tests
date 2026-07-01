@@ -34,6 +34,7 @@ class MemberDetailsResultsSpec extends BaseSpec {
       auth.loginUsingAuthorityWizard("PSA")
 
       When("I click the Start now link")
+      memberDetails.checkLandingPageUrl()
       memberDetails.startNow()
 
       And("I fill in the First Name and Last Name")
