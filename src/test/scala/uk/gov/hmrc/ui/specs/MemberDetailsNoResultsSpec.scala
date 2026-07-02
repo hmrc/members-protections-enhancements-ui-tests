@@ -34,7 +34,7 @@ class MemberDetailsNoResultsSpec extends BaseSpec {
       auth.loginUsingAuthorityWizard("PSP")
 
       When("I click the Start now link")
-      memberDetails.checkJourneyUrl("start")
+      memberDetails.checkLandingPageUrl()
       memberDetails.startNow()
 
       And("I fill in the First Name and Last Name")

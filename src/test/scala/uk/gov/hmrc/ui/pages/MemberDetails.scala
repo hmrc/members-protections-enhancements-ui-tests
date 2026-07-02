@@ -97,9 +97,16 @@ object MemberDetails extends BasePage {
   def clickLink(link: String): Unit =
     click(By.id(link))
 
-  def checkJourneyUrl(page: String): Unit =
+  def checkLandingPageUrl(): Unit = {
+    val url = dashboardUrl
+    fluentWait.until(ExpectedConditions.urlContains(url))
+    getCurrentUrl.startsWith(url)
+  }
+
+  def checkJourneyUrl(page: String): Unit = {
     val url = s"$dashboardUrl/$page"
     fluentWait.until(ExpectedConditions.urlContains(url))
     getCurrentUrl.startsWith(url)
+  }
 
 }
