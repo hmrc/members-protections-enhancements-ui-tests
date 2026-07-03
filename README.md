@@ -1,57 +1,41 @@
-**This is the template README. Please update this with project specific content.**
+# members-protections-enhancements-ui-tests
 
-# mpe-ui-journey-tests
+## Overview
 
-MPE UI journey tests.
+This is the journey(ui/acceptance) test repository for members protections enhancements
 
-## Pre-requisites
+## Starting Services
 
-### Services
-
-Start Mongo Docker container as follows:
-
-```bash
-docker run --rm -d -p 27017:27017 --name mongo percona/percona-server-mongodb:5.0
-```
-
-Start `<SERVICE_MANAGER_PROFILE>` services as follows:
-
-```bash
+To start the required services, run:
+```shell 
 sm2 --start MPE_ALL
 ```
 
-## Tests
+## Executing tests
 
-Run tests as follows:
-
-* Argument `<browser>` must be `chrome`, `edge`, or `firefox`.
-* Argument `<environment>` must be `local`, `dev`, `qa` or `staging`.
+### Running UI tests locally
 
 ```bash
-sbt clean -Dbrowser="<browser>" -Denvironment="<environment>" test testReport
+./run-tests.sh
 ```
 
-## Scalafmt
-
-Check all project files are formatted as expected as follows:
+### Running UI tests in QA
 
 ```bash
-sbt scalafmtCheckAll scalafmtCheck
+./run-tests-qa.sh
 ```
 
-Format `*.sbt` and `project/*.scala` files as follows:
+Note that often the QA downstream may be switched off, so it is advised to test locally
+
+### ZAP tests
 
 ```bash
-sbt scalafmtSbt
+./run-zap-tests.sh
 ```
 
-Format all project files as follows:
+Note that often the QA downstream may be switched off, so it is advised to test locally
 
-```bash
-sbt scalafmtAll
-```
+## Licence
 
-## License
-
-This code is open source software licensed under the [Apache 2.0 License]("http://www.apache.org/licenses/LICENSE-2.0.html").
+This code is open source software licensed under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html).
 
