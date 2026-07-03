@@ -4,7 +4,7 @@ object Dependencies {
 
   // format: off
   val test: Seq[ModuleID] = Seq(
-    "uk.gov.hmrc"         %% "ui-test-runner"     % "0.52.0",
+    "uk.gov.hmrc"         %% "ui-test-runner"     % "0.54.0",
     "junit"                % "junit"              % "4.13.2",
   ).map(_ % Test)
   // format: on
